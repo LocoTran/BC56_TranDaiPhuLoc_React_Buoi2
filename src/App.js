@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Content from "./Content/Content";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div
+                className="gray"
+                style={{
+                    position: "absolute",
+                    height: "100vh",
+                    width: "100vw",
+                    top: 0,
+                    left: 0,
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                    zIndex: -1,
+                }}
+            ></div>
+
+            <div
+                className="background"
+                style={{
+                    position: "absolute",
+                    backgroundImage: "url(./glassesImage/background.jpg)",
+                    height: "100vh",
+                    width: "100vw",
+                    backgroundSize: "cover",
+                    zIndex: -2,
+                }}
+            ></div>
+
+            <div className="container">
+                <Content />
+            </div>
+        </div>
+    );
 }
 
 export default App;
